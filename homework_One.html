@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+      'use strict';
+      alert("Конвертирование температуры из Цельсия по Фаренгейту")
+      let userNumber = +prompt("Введите температуру по Цельсию,", "");
+
+      let tempretureF =  (9 / 5) * userNumber + 32;
+
+      alert(tempretureF);
+  </script>
+
+
+  <script>
+    'use strict';
+
+    let admin = "Василий";
+    let name = admin;
+    alert("Переменная name = " + name);
+  </script>
+
+
+  <script>
+    'use strict';
+
+    /*
+    1. 10 + 10 = 20
+    2. 20 + "10" = 2010 так как число + строка = строка
+    3. 2010 присваиваем в переменную summOne
+    4. с помощью console.log выводим summOne в консоль
+    */
+
+    let summOne = 10 + 10 + "10";
+    console.log(summOne);
+
+    /*
+    1. 10 + "10" = "1010" чиcло + строка = строка
+    2. "1010" + "10" = "101010" строка
+    3. "101010" присваиваем в переменную summOne
+    4. с помощью console.log выводим summTwo в консоль
+    */
+
+    let summTwo = 10 + "10" + 10;
+    console.log(summTwo);
+
+
+    /*
+    1. 10 + 10 = 20
+    2. 20 + null(ничего) = 20 Number(null) = 0;
+    3. 20 + 10 = 30
+    4. с помощью console.log выводим summThree в консоль
+    */
+    let summThree = 10 + 10 + +"10";
+    console.log(summThree);
+
+
+    /*
+    1. " " пустая строка возвращает null(0)
+    2. - " " унарный минус
+    3. 10/-0 = -Infinity
+    4. с помощью console.log выводим summFour в консоль
+    */
+    let summFour = 10 / -"";
+    console.log(summFour);
+
+
+    /*
+    1. "2,5" строка
+    2. +"2,5" унарный плюс делает из этого выражения NaN
+    3. 10/NaN = NaN
+    4. с помощью console.log выводим summFive в консоль
+    */
+    let summFive = 10 / +"2,5";
+    console.log(summFive);
+  </script>
+
+</body>
+</html>
