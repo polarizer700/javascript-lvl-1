@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+    //пример 1
+     let a = 1, b = 1, c, d;
+      c = ++a; //префиксная форма инкремента, сначала увеличит а на 1, затем запишет в переменную
+      alert(c); // c = a =2;
+
+      //пример 2
+      d = b++;
+      alert(d); //постфиксная форма инкремента, сначала запишет переменную (d = b = 1), после увеличит ее на 1 (b = 2)
+
+      //пример 3
+       c = 2 + ++a; // а увеличиваем на 1 ( a =3), c = 5
+       alert(c);
+
+       //пример 4
+       d = 2 + b++; // (b = 2) + 2,  d = 4, затем увеличиваем b на 1 b = 3
+       alert(d);
+
+       alert(a);
+       alert(b);
+  </script>
+
+
+<script>
+  let y = 2;
+  let x = 1 + (y *= 2); // y *=2 ,работает как y = y * 2, так как y=2, то перезаписав этим выражением переменную y = 4, 4 + 1 = 5 , x=5
+  alert(x);
+</script>
+
+<script>
+  let j = -10;
+  let r = 5;
+
+  if( j > 0 && r > 0){
+    let v = j - r;
+    alert(v);
+  } else if(j < 0 && r < 0){
+    v = j * r;
+    alert(v);
+  } else if( j < 0 && r > 0 || j > 0 && r < 0){
+    v = j + r;
+    alert(v);
+  }
+</script>
+
+<script>
+  function summ(o, p){
+    sum = o + p;
+    return sum;
+  }
+
+  function minus(o, p){
+    min = o - p;
+    return min;
+  }
+
+  function division(o, p){
+    divs = o / p;
+    return divs;
+  }
+
+  function multi(o, p){
+    mult = o * p;
+    return mult;
+  }
+
+
+  summ(5, 3);
+  minus(17, 1);
+  division(100, -4);
+  multi(-2, 1);
+
+  alert(sum);
+  alert(min);
+  alert(divs);
+  alert(mult);
+
+
+  function all( o , p ,act){
+    switch (act) {
+      case + :
+        summ(o, p)
+        break;
+    }
+  }
+  all(4,5,+);
+</script>
+
+
+</body>
+</html>
