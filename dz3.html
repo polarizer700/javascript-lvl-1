@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    'use strict';
+
+    for(let i = 0; i <= 10; i++){
+      if(i == 0){
+        console.log(i + " - это ноль");
+      }else if ((i%2) == 0){
+        console.log(i + " - это четное число");
+      }else{
+        (i%2 != 0);
+        console.log(i + " - это нечетное число");
+      }
+    }
+  </script>
+
+  <script>
+    'use strict';
+    const post = {
+     author: "John", //вывести этот текст
+     postId: 23,
+        comments: [
+          {
+             userId: 10,
+             userName: "Alex",
+             text: "lorem ipsum",
+             rating: {
+               likes: 10,
+               dislikes: 2 //вывести это число
+               }
+          },
+          {
+            userId: 5, //вывести это число
+            userName: "Jane",
+            text: "lorem ipsum 2", //вывести этот текст
+            rating: {
+              likes: 3,
+              dislikes: 1
+            }
+          },
+                  ]
+                  };
+        console.log(post.author);
+        console.log(post.comments[0].rating['dislikes']);
+        console.log(post.comments[0].rating.dislikes);
+        console.log(post.comments[1].userId);
+        console.log(post.comments[1].text);
+  </script>
+
+  <script>
+    'use strict';
+
+    const products = [
+     {
+       id: 3,
+       price: 200,
+      },
+      {
+        id: 4,
+        price: 900,
+       },
+       {
+         id: 1,
+         price: 1000,
+        },
+    ];
+
+    function interate(product){
+      for(let i = 0; i < products.length; i++){
+        products[i].discount = '15%';
+      }
+    }
+
+    products.forEach(interate);
+  </script>
+
+<script>
+  'use script';
+
+  const products = [
+   {
+     id: 3,
+     price: 127,
+     photos: [
+       "1.jpg",
+       "2.jpg",
+       ]
+    },
+    {
+      id: 5,
+      price: 499,
+      photos: []
+    },
+    {
+      id: 10,
+      price: 26,
+      photos: [
+      "3.jpg"
+      ]
+    },
+    {
+      id: 8,
+      price: 78,
+    },
+  ];
+
+
+
+let filterProductsPhoto = products.filter(function(item){
+  return "photos" in item && item.photos.length > 0;
+})
+console.log(filterProductsPhoto);
+products.sort(function(a,b){
+
+    return a.price - b.price;
+
+})
+    console.log(products);
+</script>
+
+<script>
+  'use strict';
+
+  let userNumber = +prompt('Введите число какой длины будет горка', '');
+  let mount = " ";
+
+
+for(let j = 0; j <= 100; j++){
+  if(userNumber > 100  || userNumber <= 0 || isNaN(userNumber) || userNumber == undefined){
+
+  userNumber = +prompt('Введите число какой длины будет горка (меньше 100)', '');
+  }
+}
+/*else {
+   userNumber = +prompt('Введите число какой длины будет горка (меньше 100)', '');
+}*/
+
+  for(let i = 0; i < userNumber;i++){
+  //if(userNumber == 0 || userNumber == undefined || userNumber == NaN){
+     if(userNumber <= 100){
+    mount += "*";
+    console.log(mount);
+    }
+  }
+
+</script>
+
+
+
+
+</body>
+</html>
