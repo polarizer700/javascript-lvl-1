@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<script>
+<!--<script>
     //пример 1
      let a = 1, b = 1, c, d;
       c = ++a; //префиксная форма инкремента, сначала увеличит а на 1, затем запишет в переменную
@@ -35,9 +35,9 @@
   let y = 2;
   let x = 1 + (y *= 2); // y *=2 ,работает как y = y * 2, так как y=2, то перезаписав этим выражением переменную y = 4, 4 + 1 = 5 , x=5
   alert(x);
-</script>
+</script>-->
 
-<script>
+<!--<script>
   let j = -10;
   let r = 5;
 
@@ -51,7 +51,7 @@
     v = j + r;
     alert(v);
   }
-</script>
+</script>-->
 
 <script>
   function summ(o, p){
@@ -75,7 +75,7 @@
   }
 
 
-  summ(5, 3);
+  /*summ(5, 3);
   minus(17, 1);
   division(100, -4);
   multi(-2, 1);
@@ -83,17 +83,33 @@
   alert(sum);
   alert(min);
   alert(divs);
-  alert(mult);
+  alert(mult);*/
 
 
   function all( o , p ,act){
     switch (act) {
-      case + :
+      case '+' :
         summ(o, p)
+        break;
+        case '-' :
+        minus(o, p)
+        break;
+        case '*' :
+        multi(o, p)
+        break;
+        case '/' :
+        division(o, p)
         break;
     }
   }
-  all(4,5,+);
+  all(4,5,'+');
+  alert(sum);
+  all(17,5,'-');
+  alert(min);
+  all(7,5,'*');
+  alert(mult);
+  all(1000,50,'/');
+  alert(divs);
 </script>
 
 
