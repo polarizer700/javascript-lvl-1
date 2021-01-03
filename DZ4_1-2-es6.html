@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    'use strict';
+
+    class Post{
+      constructor(author, text, date) {
+        this.author = author;
+        this.text = text;
+        this.date = date;
+      }
+
+      edit(text){
+        this.text = text;
+      }
+
+    }
+
+
+    const pushkin = new Post('pushkin', 'lukomore', new Date());
+        console.log(pushkin);
+        pushkin.edit('Evgeniy Onegin');
+        console.log(pushkin);
+
+    class AttachedPost extends Post{
+      constructor(author, text, date, highlighted){
+        super(author, text, date);
+        this.highlighted = false;
+      }
+
+      makeTextHighlighted(){
+        this.highlighted = true;
+      }
+
+    }
+    /*function AttachedPost(author, text, date, highlighted) {
+         Post.call(this, author, text, date);
+         this.highlighted = false;
+    }
+
+    AttachedPost.prototype = Object.create(Post.prototype);
+    AttachedPost.prototype.constructor = AttachedPost;
+
+    AttachedPost.prototype.makeTextHighlighted = function() {
+            this.highlighted = true;
+        }*/
+
+        const lev = new AttachedPost('lev', 'war and peace', new Date());
+        console.log(lev);
+        lev.makeTextHighlighted();
+        lev.edit('Anna Karenina');
+        console.log(lev);
+  </script>
+
+</body>
+</html>
