@@ -1,0 +1,16 @@
+.product {
+    padding: 20px;
+    float: left;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+}
+.add{
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  background: green;
+}
